@@ -1,4 +1,5 @@
-URL Expander is the opposite of URL Shortener. It provides a JSON API for expanding short URLs, along with additional information about the expanded URL.
+# URL Expander
+This is the opposite of URL Shortener. It provides a JSON API for expanding short URLs, along with additional information about the expanded URL.
 
 ## Response parameters:
 * `longURL`: URL resulting from first redirect
@@ -12,6 +13,7 @@ URL Expander is the opposite of URL Shortener. It provides a JSON API for expand
 * http://url-expand.appspot.com/http://is.gd/w
 
 ## Planned features:
+* improved error handling
 * option to fetch fresh results, skipping cache if it's older than *n* minutes
 * option to recursively follow redirects
 * fetch meta-data (e.g. title, description, canonical URL, shortlink) from destination
