@@ -57,7 +57,12 @@ def expandURL(url):
 	return expandURLObject
 
 class AppRequestHandler(webapp2.RequestHandler):
-	def get(self, url):
+	def get(self, url=''):
+
+		if not url.strip():
+			self.redirect("https://github.com/dragonsblaze/url-expander#readme")
+			return
+
 		shortURL = urllib.unquote(url)
 		expandURLObject = expandURL(shortURL)
 		self.response.out.write(json.dumps(expandURLObject))
